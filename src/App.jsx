@@ -66,7 +66,7 @@ export default function App() {
       <main id="top">
         <div className="wrap hero">
           <div>
-            <div className="eyebrow">Designed with care · Made to be worn</div>
+            <p className="motto">Where fashion meets perfection</p>
             <h1>Style that feels<br />like you.</h1>
             <p>Discover Bidah Outfit Collection: fashion designed for confidence, comfort, and your own special moments. Browse the catalogue and contact the designer to ask a question or place an enquiry.</p>
             <div className="actions">
@@ -113,7 +113,6 @@ export default function App() {
                 <ProductCard key={product.number} product={product} />
               ))}
             </div>
-            <p className="catalog-note">Product names, photos, and sizes are placeholders. The designer’s real collection will be added when available.</p>
           </div>
         </section>
         <section className="contact" id="contact">
@@ -131,6 +130,10 @@ export default function App() {
               <div className="person-label">Your fashion designer</div>
               <h3>Bidah</h3>
               <p className="person-role">Fashion designer · Bidah Outfit Collection</p>
+              <blockquote className="owner-quote">
+                <p>“The secret of getting ahead is getting started.”</p>
+                <cite>A line Bidah lives by</cite>
+              </blockquote>
               <div className="detail"><b>Phone</b><a href="tel:+2348061592493">+234 806 159 2493</a></div>
               <div className="detail"><b>WhatsApp</b><a href="https://wa.me/2348061592493">Message Bidah ↗</a></div>
               <div className="detail"><b>Address</b><span>Location details coming soon</span></div>
