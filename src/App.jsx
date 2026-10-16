@@ -79,7 +79,8 @@ export default function App() {
         </div>
       </header>
       <main id="top">
-        <div className="wrap hero">
+        <section className="hero-band" aria-label="Bidah Outfit Collection">
+          <div className="wrap hero">
           <div>
             <p className="motto">Where fashion meets perfection</p>
             <h1>Style that feels<br />like you.</h1>
@@ -89,14 +90,13 @@ export default function App() {
               <a className="btn btn-light" href="https://wa.me/2348061592493">Chat on WhatsApp</a>
             </div>
           </div>
-          <div className="hero-art" aria-label="Fashion collection photo to be added" role="img">
-            <div className="sun" />
-            <div className="arch" />
-            <div className="vase" />
-            <div className="stem" />
-            <div className="art-label">Collection photos coming soon</div>
+          <img
+            className="hero-art"
+            src="/WhatsApp%20Image%202026-10-16%20at%205.14.58%20PM.jpeg"
+            alt="Bidah Outfit Collection logo"
+          />
           </div>
-        </div>
+        </section>
         <div className="trust">
           <div className="wrap trust-inner">
             <span><b>Bidah Outfit Collection</b> — independent fashion designer</span>
