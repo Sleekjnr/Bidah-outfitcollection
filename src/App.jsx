@@ -37,16 +37,29 @@ function ProductCard({ product }) {
 
 export default function App() {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
       <header className="topbar">
         <div className="wrap nav">
           <a className="brand" href="#top">Bidah <span>Outfit Collection</span></a>
-          <nav className="navlinks" aria-label="Main navigation">
-            <a href="#catalogue">Catalogue</a>
-            <a href="#contact">About &amp; contact</a>
-            <a className="nav-cta" href="#contact">Contact the designer</a>
+          <button
+            className={`menu-toggle${menuOpen ? ' menu-toggle-open' : ''}`}
+            type="button"
+            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={menuOpen}
+            aria-controls="main-navigation"
+            onClick={() => setMenuOpen(open => !open)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+          <nav className={`navlinks${menuOpen ? ' navlinks-open' : ''}`} id="main-navigation" aria-label="Main navigation">
+            <a href="#catalogue" onClick={() => setMenuOpen(false)}>Catalogue</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>About &amp; contact</a>
+            <a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Contact the designer</a>
           </nav>
         </div>
       </header>
