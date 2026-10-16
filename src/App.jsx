@@ -2,19 +2,34 @@ import { useState } from 'react';
 import './App.css';
 
 const filters = [
-  ['all', 'Everything'],
+  ['all', 'All styles'],
+  ['hijabs', 'Hijabs'],
+  ['abayas', 'Abayas'],
   ['ready', 'Ready to wear'],
-  ['custom', 'Custom designs'],
+  ['native', 'Native wear'],
+  ['jumpsuits', 'Jumpsuits'],
   ['occasion', 'Occasion wear'],
 ];
 
 const products = [
-  { category: 'ready', number: '01 / READY TO WEAR', title: 'Ready-to-wear design', description: 'Add style name, sizes, and details' },
-  { category: 'custom', number: '02 / CUSTOM', title: 'Custom outfit', description: 'Made to your measurements and taste', background: '#eee5e8', shape: 'cup' },
-  { category: 'occasion', number: '03 / OCCASION', title: 'Occasion wear', description: 'A standout look for your special day', background: '#eee4e6', shape: 'bowl' },
-  { category: 'ready', number: '04 / READY TO WEAR', title: 'Signature look', description: 'Add garment name, fabric, and sizes', background: '#f0e8e6', shape: 'bag' },
-  { category: 'custom', number: '05 / CUSTOM', title: 'Made-to-measure', description: 'Your fit, your fabric, your design', background: '#e9e3e7', shape: 'candle' },
-  { category: 'occasion', number: '06 / OCCASION', title: 'Special occasion style', description: 'Add occasion, style, and fabric details', background: '#e5e8e7', shape: 'linen' },
+  { category: 'hijabs', number: '01 / HIJABS', title: 'Chiffon hijab', description: 'A lightweight drape for everyday styling' },
+  { category: 'hijabs', number: '02 / HIJABS', title: 'Jersey hijab', description: 'Soft, easy-to-wear coverage' },
+  { category: 'hijabs', number: '03 / HIJABS', title: 'Printed hijab', description: 'A patterned accent for versatile looks' },
+  { category: 'abayas', number: '04 / ABAYAS', title: 'Open-front abaya', description: 'A layered modest style' },
+  { category: 'abayas', number: '05 / ABAYAS', title: 'Everyday abaya', description: 'A clean silhouette for daily wear' },
+  { category: 'abayas', number: '06 / ABAYAS', title: 'Occasion abaya', description: 'Refined details for special moments' },
+  { category: 'ready', number: '07 / READY TO WEAR', title: 'Two-piece set', description: 'A coordinated top and bottom, ready to style' },
+  { category: 'ready', number: '08 / READY TO WEAR', title: 'Everyday dress', description: 'A comfortable one-piece look' },
+  { category: 'ready', number: '09 / READY TO WEAR', title: 'Blouse and skirt set', description: 'An easy pairing with a polished finish' },
+  { category: 'native', number: '10 / NATIVE WEAR', title: 'Ankara two-piece', description: 'A coordinated look with a bold print' },
+  { category: 'native', number: '11 / NATIVE WEAR', title: 'Native occasion set', description: 'Traditional details for celebrations' },
+  { category: 'native', number: '12 / NATIVE WEAR', title: 'Modern native dress', description: 'A contemporary silhouette with cultural detail' },
+  { category: 'jumpsuits', number: '13 / JUMPSUITS', title: 'Wide-leg jumpsuit', description: 'A relaxed shape with a polished finish' },
+  { category: 'jumpsuits', number: '14 / JUMPSUITS', title: 'Belted jumpsuit', description: 'A defined waist for day-to-evening style' },
+  { category: 'jumpsuits', number: '15 / JUMPSUITS', title: 'Sleeveless jumpsuit', description: 'A light, versatile one-piece style' },
+  { category: 'occasion', number: '16 / OCCASION WEAR', title: 'Wedding guest look', description: 'A refined style for celebrations' },
+  { category: 'occasion', number: '17 / OCCASION WEAR', title: 'Celebration gown', description: 'A statement for special events' },
+  { category: 'occasion', number: '18 / OCCASION WEAR', title: 'Party-ready set', description: 'Coordinated pieces for evening occasions' },
 ];
 
 function ProductCard({ product }) {
