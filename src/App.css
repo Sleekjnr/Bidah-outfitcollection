@@ -53,3 +53,39 @@
         @media(prefers-reduced-motion:reduce){
             *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
         }
+
+        .app{min-height:100vh;background:var(--paper);color:var(--ink);transition:background-color .25s ease,color .25s ease}
+        .theme-toggle{flex:none;border:1px solid var(--line);border-radius:30px;background:transparent;color:var(--ink);padding:9px 13px;font-size:13px;font-weight:700;cursor:pointer;transition:background-color .25s ease,color .25s ease,border-color .25s ease,transform .25s ease}
+        .theme-toggle:hover{transform:translateY(-2px);background:var(--white)}
+        .theme-toggle:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+        .navlinks a:not(.nav-cta){color:var(--muted)}
+        .btn-light{border-color:var(--line)}
+        .filter{color:var(--muted)}
+        .contact-intro p{color:var(--muted)}
+        .contact{background:#e9ece4}
+        .person{border-color:var(--line)}
+        .detail b{color:var(--muted)}
+        .app.dark-theme{--ink:#f3e9ed;--muted:#c4b4bc;--paper:#1b171a;--white:#292328;--green:#e0a4b5;--line:#493b42;--orange:#d994a7}
+        .app.dark-theme .contact{background:#241e22}
+        .app.dark-theme .contact-intro p{color:var(--muted)}
+        .app.dark-theme .product-art{background:linear-gradient(145deg,#382d33,#30252c)!important}
+        .app.dark-theme .product-art:after{color:var(--green)}
+        .app.dark-theme .number{color:var(--muted)}
+        .app.dark-theme .filter.active,.app.dark-theme .filter:hover{background:var(--green);border-color:var(--green);color:#24191e}
+        .app.dark-theme .btn-dark{background:var(--green);color:#24191e}
+        .app.dark-theme .btn-dark:hover{background:#d390a3}
+        @media(max-width:760px){
+            .nav{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center}
+            .brand{font-size:18px;white-space:nowrap}
+            .theme-toggle{padding:7px 9px;font-size:12px}
+            .menu-toggle{width:40px;height:40px;padding:8px}
+            .navlinks{grid-column:1/-1;width:100%;flex:none}
+        }
+        @media(max-width:400px){
+            .brand{font-size:16px}
+            .theme-toggle{padding:6px 8px;font-size:11px}
+            .menu-toggle{width:38px;height:38px}
+        }
+        @media(max-width:360px){
+            .theme-toggle span:last-child{display:none}
+        }

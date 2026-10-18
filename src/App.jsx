@@ -53,12 +53,23 @@ function ProductCard({ product }) {
 export default function App() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <>
+    <div className={darkMode ? 'app dark-theme' : 'app'}>
       <header className="topbar">
         <div className="wrap nav">
           <a className="brand" href="#top">Bidah <span>Outfit Collection</span></a>
+          <button
+            className="theme-toggle"
+            type="button"
+            aria-pressed={darkMode}
+            aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+            onClick={() => setDarkMode(mode => !mode)}
+          >
+            <span aria-hidden="true">{darkMode ? '☀' : '☾'}</span>
+            <span>{darkMode ? 'Light mode' : 'Dark mode'}</span>
+          </button>
           <button
             className={`menu-toggle${menuOpen ? ' menu-toggle-open' : ''}`}
             type="button"
@@ -84,7 +95,7 @@ export default function App() {
           <div>
             <p className="motto">Where fashion meets perfection</p>
             <h1>Style that feels<br />like you.</h1>
-            <p>Discover Bidah Outfit Collection: fashion designed for confidence, comfort, and your own special moments. Browse the catalogue and contact the designer to ask a question or place an enquiry.</p>
+            <p><strong>Designed with modesty in mind.</strong><br />From everyday favourites to special-occasion looks, Bidah creates pieces that honour your values and help you feel at home in your style.</p>
             <div className="actions">
               <a className="btn btn-dark" href="#catalogue">Browse the collection</a>
               <a className="btn btn-light" href="https://wa.me/2348061592493">Chat on WhatsApp</a>
@@ -162,6 +173,6 @@ export default function App() {
           <a href="#top">Back to top ↑</a>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
