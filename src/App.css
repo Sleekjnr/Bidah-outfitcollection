@@ -33,3 +33,23 @@
             .menu-toggle-open span:nth-child(2){opacity:0}
             .menu-toggle-open span:last-child{transform:translateY(-7px) rotate(-45deg)}
         }
+
+        .brand,.btn,.nav-cta,.filter,.ask,.card,.product-art,.person h3{transition:transform .25s ease,box-shadow .25s ease,color .25s ease,background-color .25s ease,border-color .25s ease}
+        .brand{display:inline-block}
+        .person h3{width:fit-content}
+        .btn:focus-visible,.nav-cta:focus-visible,.filter:focus-visible,.ask:focus-visible,.brand:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+        @media(hover:hover){
+            .brand:hover{transform:translateY(-2px);color:var(--green)}
+            .brand:hover span{color:var(--ink)}
+            .btn:hover,.nav-cta:hover{transform:translateY(-3px);box-shadow:0 8px 18px #2c222826}
+            .btn-dark:hover{background:var(--green)}
+            .filter:hover{transform:translateY(-2px)}
+            .card:hover{transform:translateY(-5px);box-shadow:0 12px 26px #2c22281a;border-color:#d9c4cc}
+            .card:hover .product-art{transform:scale(1.035)}
+            .ask:hover{transform:translateX(3px);color:var(--ink)}
+            .person h3:hover{transform:translateX(3px);color:var(--green)}
+        }
+        .btn:active,.nav-cta:active,.filter:active{transform:scale(.97)}
+        @media(prefers-reduced-motion:reduce){
+            *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+        }
