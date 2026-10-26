@@ -89,3 +89,9 @@
         @media(max-width:360px){
             .theme-toggle span:last-child{display:none}
         }
+
+        .product-art{overflow:hidden}
+        .product-art:after{content:none}
+        .product-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+        .number{z-index:1;background:#fffdfde8;border-radius:20px;padding:5px 8px}
+        .app.dark-theme .number{background:#292328e8}

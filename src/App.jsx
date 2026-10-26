@@ -12,24 +12,24 @@ const filters = [
 ];
 
 const products = [
-  { category: 'hijabs', number: '01 / HIJABS', title: 'Chiffon hijab', description: 'A lightweight drape for everyday styling' },
-  { category: 'hijabs', number: '02 / HIJABS', title: 'Jersey hijab', description: 'Soft, easy-to-wear coverage' },
-  { category: 'hijabs', number: '03 / HIJABS', title: 'Printed hijab', description: 'A patterned accent for versatile looks' },
-  { category: 'abayas', number: '04 / ABAYAS', title: 'Open-front abaya', description: 'A layered modest style' },
-  { category: 'abayas', number: '05 / ABAYAS', title: 'Everyday abaya', description: 'A clean silhouette for daily wear' },
-  { category: 'abayas', number: '06 / ABAYAS', title: 'Occasion abaya', description: 'Refined details for special moments' },
-  { category: 'ready', number: '07 / READY TO WEAR', title: 'Two-piece set', description: 'A coordinated top and bottom, ready to style' },
-  { category: 'ready', number: '08 / READY TO WEAR', title: 'Everyday dress', description: 'A comfortable one-piece look' },
-  { category: 'ready', number: '09 / READY TO WEAR', title: 'Blouse and skirt set', description: 'An easy pairing with a polished finish' },
-  { category: 'native', number: '10 / NATIVE WEAR', title: 'Ankara two-piece', description: 'A coordinated look with a bold print' },
-  { category: 'native', number: '11 / NATIVE WEAR', title: 'Native occasion set', description: 'Traditional details for celebrations' },
-  { category: 'native', number: '12 / NATIVE WEAR', title: 'Modern native dress', description: 'A contemporary silhouette with cultural detail' },
-  { category: 'jumpsuits', number: '13 / JUMPSUITS', title: 'Wide-leg jumpsuit', description: 'A relaxed shape with a polished finish' },
-  { category: 'jumpsuits', number: '14 / JUMPSUITS', title: 'Belted jumpsuit', description: 'A defined waist for day-to-evening style' },
-  { category: 'jumpsuits', number: '15 / JUMPSUITS', title: 'Sleeveless jumpsuit', description: 'A light, versatile one-piece style' },
-  { category: 'occasion', number: '16 / OCCASION WEAR', title: 'Wedding guest look', description: 'A refined style for celebrations' },
-  { category: 'occasion', number: '17 / OCCASION WEAR', title: 'Celebration gown', description: 'A statement for special events' },
-  { category: 'occasion', number: '18 / OCCASION WEAR', title: 'Party-ready set', description: 'Coordinated pieces for evening occasions' },
+  { category: 'hijabs', number: '01 / HIJABS', title: 'Chiffon hijab', description: 'A lightweight drape for everyday styling', image: '/product-images/hijab-drape.jpg', imageAlt: 'Woman styling a dark draped hijab with a blue outfit' },
+  { category: 'hijabs', number: '02 / HIJABS', title: 'Jersey hijab', description: 'Soft, easy-to-wear coverage', image: '/product-images/hijab-soft-drape.jpg', imageAlt: 'Close-up of a softly draped neutral hijab' },
+  { category: 'hijabs', number: '03 / HIJABS', title: 'Printed hijab', description: 'A patterned accent for versatile looks', image: '/product-images/hijab-print.jpg', imageAlt: 'Woman wearing a light hijab with a colourful printed outfit' },
+  { category: 'abayas', number: '04 / ABAYAS', title: 'Open-front abaya', description: 'A layered modest style', image: '/product-images/abaya-collection.jpg', imageAlt: 'Models wearing long, layered modest outfits' },
+  { category: 'abayas', number: '05 / ABAYAS', title: 'Everyday abaya', description: 'A clean silhouette for daily wear', image: '/product-images/abaya-everyday.jpg', imageAlt: 'Full-length black abaya with a simple silhouette' },
+  { category: 'abayas', number: '06 / ABAYAS', title: 'Occasion abaya', description: 'Refined details for special moments', image: '/product-images/abaya-embroidered.jpg', imageAlt: 'Black abaya with decorative embroidery' },
+  { category: 'ready', number: '07 / READY TO WEAR', title: 'Two-piece set', description: 'A coordinated top and bottom, ready to style', image: '/product-images/readywear-layered.jpg', imageAlt: 'Layered neutral outfit styled with a long coat' },
+  { category: 'ready', number: '08 / READY TO WEAR', title: 'Everyday dress', description: 'A comfortable one-piece look', image: '/product-images/readywear-dress.jpg', imageAlt: 'Long-sleeved white shirt dress with a waist tie' },
+  { category: 'ready', number: '09 / READY TO WEAR', title: 'Blouse and skirt set', description: 'An easy pairing with a polished finish', image: '/product-images/occasion-coordinated.jpg', imageAlt: 'Two coordinated dark modest outfits' },
+  { category: 'native', number: '10 / NATIVE WEAR', title: 'Ankara two-piece', description: 'A coordinated look with a bold print', image: '/product-images/native-patterned-set.jpg', imageAlt: 'Coordinated outfit with a bold all-over print' },
+  { category: 'native', number: '11 / NATIVE WEAR', title: 'Native occasion set', description: 'Traditional details for celebrations', image: '/product-images/native-headwrap.jpg', imageAlt: 'Portrait featuring an African-print headwrap' },
+  { category: 'native', number: '12 / NATIVE WEAR', title: 'Modern native dress', description: 'A contemporary silhouette with cultural detail', image: '/product-images/native-fabric-detail.jpg', imageAlt: 'Close-up of textured garments on a clothing rail' },
+  { category: 'jumpsuits', number: '13 / JUMPSUITS', title: 'Wide-leg jumpsuit', description: 'A relaxed shape with a polished finish', image: '/product-images/readywear-layered.jpg', imageAlt: 'Long, relaxed layered outfit in neutral tones' },
+  { category: 'jumpsuits', number: '14 / JUMPSUITS', title: 'Belted jumpsuit', description: 'A defined waist for day-to-evening style', image: '/product-images/readywear-dress.jpg', imageAlt: 'Long-sleeved belted outfit in a light neutral tone' },
+  { category: 'jumpsuits', number: '15 / JUMPSUITS', title: 'Sleeveless jumpsuit', description: 'A light, versatile one-piece style', image: '/product-images/native-patterned-set.jpg', imageAlt: 'Printed coordinated set with a relaxed silhouette' },
+  { category: 'occasion', number: '16 / OCCASION WEAR', title: 'Wedding guest look', description: 'A refined style for celebrations', image: '/product-images/abaya-collection.jpg', imageAlt: 'Elegant long modest outfits styled for an occasion' },
+  { category: 'occasion', number: '17 / OCCASION WEAR', title: 'Celebration gown', description: 'A statement for special events', image: '/product-images/abaya-embroidered.jpg', imageAlt: 'Embellished black occasion abaya' },
+  { category: 'occasion', number: '18 / OCCASION WEAR', title: 'Party-ready set', description: 'Coordinated pieces for evening occasions', image: '/product-images/occasion-coordinated.jpg', imageAlt: 'Coordinated evening outfits in dark tones' },
 ];
 
 function ProductCard({ product }) {
@@ -37,7 +37,7 @@ function ProductCard({ product }) {
     <article className="card" data-category={product.category}>
       <div className="product-art" style={product.background ? { background: product.background } : undefined}>
         <span className="number">{product.number}</span>
-        {product.shape && <div className={`shape ${product.shape}`} />}
+        <img className="product-image" src={product.image} alt={product.imageAlt} loading="lazy" decoding="async" />
       </div>
       <div className="card-copy">
         <h3 className="card-title">{product.title}</h3>
@@ -139,6 +139,7 @@ export default function App() {
                 <ProductCard key={product.number} product={product} />
               ))}
             </div>
+            <p className="catalog-note">These editorial photos are style references, not photos of Bidah’s exact pieces. Contact the designer for current fabrics, colours, and availability.</p>
           </div>
         </section>
         <section className="contact" id="contact">
