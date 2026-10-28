@@ -32,12 +32,12 @@ const products = [
   { category: 'occasion', number: '18 / OCCASION WEAR', title: 'Party-ready set', description: 'Coordinated pieces for evening occasions', image: '/product-images/occasion-coordinated.jpg', imageAlt: 'Coordinated evening outfits in dark tones' },
 ];
 
-function ProductCard({ product }) {
+function ProductCard({ product, eager = false }) {
   return (
     <article className="card" data-category={product.category}>
       <div className="product-art" style={product.background ? { background: product.background } : undefined}>
         <span className="number">{product.number}</span>
-        <img className="product-image" src={product.image} alt={product.imageAlt} loading="lazy" decoding="async" />
+        <img className="product-image" src={product.image} alt={product.imageAlt} loading={eager ? 'eager' : 'lazy'} decoding="async" />
       </div>
       <div className="card-copy">
         <h3 className="card-title">{product.title}</h3>
@@ -54,6 +54,7 @@ export default function App() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const visibleProducts = products.filter(product => activeFilter === 'all' || product.category === activeFilter);
 
   return (
     <div className={darkMode ? 'app dark-theme' : 'app'}>
@@ -67,8 +68,16 @@ export default function App() {
             aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             onClick={() => setDarkMode(mode => !mode)}
           >
-            <span aria-hidden="true">{darkMode ? '☀' : '☾'}</span>
-            <span>{darkMode ? 'Light mode' : 'Dark mode'}</span>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+              {darkMode ? (
+                <>
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+                </>
+              ) : (
+                <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z" />
+              )}
+            </svg>
           </button>
           <button
             className={`menu-toggle${menuOpen ? ' menu-toggle-open' : ''}`}
@@ -105,6 +114,9 @@ export default function App() {
             className="hero-art"
             src="/WhatsApp%20Image%202026-10-16%20at%205.14.58%20PM.jpeg"
             alt="Bidah Outfit Collection logo"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           </div>
         </section>
@@ -135,8 +147,8 @@ export default function App() {
               ))}
             </div>
             <div className="grid" id="products">
-              {products.filter(product => activeFilter === 'all' || product.category === activeFilter).map(product => (
-                <ProductCard key={product.number} product={product} />
+              {visibleProducts.map((product, index) => (
+                <ProductCard key={product.number} product={product} eager={index < 3} />
               ))}
             </div>
             <p className="catalog-note">These editorial photos are style references, not photos of Bidah’s exact pieces. Contact the designer for current fabrics, colours, and availability.</p>
